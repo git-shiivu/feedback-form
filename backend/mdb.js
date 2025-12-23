@@ -9,7 +9,7 @@ const client = new MongoClient(url);
 // Database Name
 const dbName = 'data';
 
-async function insertData(name,contect,email,suggestion) {
+async function insertData(name,email,suggestion) {
   // Use connect method to connect to the server
   await client.connect();
   const db = client.db(dbName);
@@ -20,7 +20,6 @@ async function insertData(name,contect,email,suggestion) {
   //INSERT
   const insertResult = await collection.insertOne({
     name:name,
-    contect: contect,
     email: email,
     suggestion: suggestion
   })

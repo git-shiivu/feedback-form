@@ -1,6 +1,6 @@
-const mysql = require('mysql2/promise');
+const mysql = require('mysql2');
 
-async function main() {
+async function mysqlInsert(name,email,sugg) {
   // Create a connection
   const connection = await mysql.createConnection({
     host: 'localhost',
@@ -11,7 +11,7 @@ async function main() {
 
   try {
     // Execute a query using async/await
-    await connection.execute('INSERT INTO feedbacks (Name,Contect,Email,Suggestion) VALUES ("Hello",3456789546,"example@example.com,"No");');
+    await connection.execute("INSERT INTO feedbacks (Name,Email,Suggestion) VALUES (?,?,?)", [name, email, sugg]);
     console.log("Done");
   } catch (err) {
     console.error(err);
@@ -21,4 +21,4 @@ async function main() {
   }
 }
 
-main();
+module.exports = mysqlInsert;
