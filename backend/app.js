@@ -3,7 +3,7 @@ const path = require('path');
 const insertData = require("./mdb")
 // const mysqlInsert = require("./db")
 const app = express();
-const PORT = 3000;
+const PORT = process.env.PORT || 3000;
 
 
 // Middleware to parse JSON and URL-encoded data
