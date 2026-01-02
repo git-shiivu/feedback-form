@@ -1,7 +1,7 @@
 {
   "main": "backend/app.js",
   "scripts": {
-    "start": "node --watch backend/app.js"
+    "start": "node backend/app.js"
   },
 
   "dependencies":{
