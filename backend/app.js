@@ -1,7 +1,6 @@
 const express = require('express');
 const path = require('path');
-const insertData = require("./mdb")
-// const mysqlInsert = require("./db")
+const insertData = require("./mdb");
 const app = express();
 const PORT = process.env.PORT || 3000;
 
@@ -28,9 +27,7 @@ app.post("/", async (req,res)=>{
         //for MongoDB
         await insertData(req.body.name, req.body.email, req.body.suggestion)
         console.log("Successfully inserted in MongoDB");
-        // //for MySQL
-        // await mysqlInsert(req.body.name, req.body.email, req.body.suggestion)
-        // console.log("Successfully inserted in MySQL");
+        
         
     } catch (error) {
         console.error(error)
@@ -45,6 +42,7 @@ app.post("/", async (req,res)=>{
 })
 
 // Start server
-app.listen(PORT, () => {
-    console.log(`Server running at http://localhost:${PORT}`);
+app.listen(PORT, (err) => {
+    console.error(err);
+    
 });
