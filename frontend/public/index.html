@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Feedback form</title>
 </head>
-<body class="h-[100vh] p-[3vw] flex justify-center bg-gray-900">
+<body class="h-[100vh] p-[3vw] pt-[50%] sm:pt-[3vw] flex justify-center bg-gray-900">
   <!-- Outer box -->
   <div class="border w-[90vw] sm:w-[35vw] max-h-[50vw] bg-gray-800 rounded-[1vw] p-[2vw]">
     <h1 class="font-bold text-[6vw] sm:text-[3vw] text-center text-white">Feedback Form</h1>
@@ -16,7 +16,7 @@
           
         <input required class="font-bold text-[3vw] sm:text-[1.5vw] border rounded-[1vw] p-[0.5vw] m-[0.5vw] text-white hover:scale-110 duration-175" type="text" name="name" id="name" placeholder="Name:">
         <input class="font-bold text-[3vw] sm:text-[1.5vw] border rounded-[1vw] p-[0.5vw] m-[0.5vw] text-white hover:scale-110 duration-175" type="email" name="email" id="email" placeholder="Email:">
-        <input required class="font-bold text-[3vw] sm:text-[1.5vw] border rounded-[1vw] p-[0.5vw] m-[0.5vw] text-white hover:scale-110 duration-175" type="text" name="suggestion" id="suggestion" placeholder="Suggestion:">
+        <textarea required class="font-bold text-[3vw] min-h-[10vw] sm:text-[1.5vw] border rounded-[1vw] p-[0.5vw] m-[0.5vw] text-white hover:scale-110 duration-175" type="text" name="suggestion" id="suggestion" placeholder="Suggestion:"></textarea>
         <div class="flex justify-evenly pt-[1vw]">
           <input class="font-bold text-[3vw] sm:text-[1.5vw] border rounded-[1vw] p-[0.5vw] m-[0.5vw] text-white hover:scale-110 hover:bg-green-700 duration-175" type="submit" value="Submit" id="submit">
           <input class="font-bold text-[3vw] sm:text-[1.5vw] border rounded-[1vw] p-[0.5vw] m-[0.5vw] text-white hover:scale-110 hover:bg-red-700 duration-175" type="reset" value="Reset">
